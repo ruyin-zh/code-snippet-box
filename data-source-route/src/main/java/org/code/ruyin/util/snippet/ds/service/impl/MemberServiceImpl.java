@@ -1,6 +1,7 @@
 package org.code.ruyin.util.snippet.ds.service.impl;
 
 import org.code.ruyin.util.snippet.ds.dao.entity.Member;
+import org.code.ruyin.util.snippet.ds.dao.entity.MemberExample;
 import org.code.ruyin.util.snippet.ds.dao.mapper.MemberMapper;
 import org.code.ruyin.util.snippet.ds.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,22 +24,17 @@ public class MemberServiceImpl implements MemberService {
     @Transactional
     @Override
     public int insert(Member member) {
-        //return memberMapper.insert(member);
-
-        return 0;
+        return memberMapper.insert(member);
     }
 
     @Override
     public int save(Member member) {
-        //return memberMapper.insert(member);
-
-        return 0;
+        return memberMapper.insert(member);
     }
 
     @Override
     public List<Member> selectAll() {
-        //return memberMapper.selectByExample(new MemberExample());
-        return null;
+        return memberMapper.selectByExample(new MemberExample());
     }
 
     @Override

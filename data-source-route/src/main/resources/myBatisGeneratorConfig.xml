@@ -5,19 +5,20 @@
 
 <generatorConfiguration>
     <!--配置要链接的数据库的数据源-->
-    <classPathEntry location="E:/GARBAGE_TEMP_SPACE/mysql-connector-java-5.1.46.jar"/>
+    <classPathEntry location="/Users/ruyin/.m2/repository/mysql/mysql-connector-java/8.0.23/mysql-connector-java-8.0.23.jar"/>
     <!---Mybatis上下文-->
     <context id="MySqlContext" targetRuntime="MyBatis3">
         <!--配置数据库的链接信息-->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://192.168.2.40:3306/test?useSSL=true" userId="root"
-                        password="ggg123"/>
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/test?useSSL=true"
+                        userId="root"
+                        password="yE6D6QTqoT63ENAO"/>
         <!--数据库BigDecimals字段在java中定义-->
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
         <!--实体类生成信息-->
-        <javaModelGenerator targetPackage="org.code.ruyin.util.snippet.ds.dao.entity.Member" targetProject="src/main/java">
+        <javaModelGenerator targetPackage="org.code.ruyin.util.snippet.ds.dao.entity" targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
@@ -30,10 +31,12 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
         <!--要生成的表结构-->
-        <table tableName="member" domainObjectName="Member"
-               enableCountByExample="false" enableUpdateByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false">
+<!--        <table tableName="member" domainObjectName="Member"-->
+<!--               enableCountByExample="false" enableUpdateByExample="false"-->
+<!--               enableDeleteByExample="false" enableSelectByExample="false"-->
+<!--               selectByExampleQueryId="false">-->
+<!--        </table>-->
+        <table tableName="member" domainObjectName="Member">
         </table>
 
     </context>
