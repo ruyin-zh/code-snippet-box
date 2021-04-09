@@ -1,5 +1,6 @@
 package org.code.ruyin.util.snippet.ds.service.impl;
 
+import org.code.ruyin.util.snippet.ds.annotation.Master;
 import org.code.ruyin.util.snippet.ds.dao.entity.Member;
 import org.code.ruyin.util.snippet.ds.dao.entity.MemberExample;
 import org.code.ruyin.util.snippet.ds.dao.mapper.MemberMapper;
@@ -37,8 +38,9 @@ public class MemberServiceImpl implements MemberService {
         return memberMapper.selectByExample(new MemberExample());
     }
 
+    @Master
     @Override
     public String getToken(String appId) {
-        return null;
+        return "test for master db";
     }
 }

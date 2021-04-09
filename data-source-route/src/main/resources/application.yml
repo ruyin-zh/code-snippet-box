@@ -1,17 +1,20 @@
+server:
+  port: 9090
+
 spring:
   datasource:
     master:
-      jdbc-url:
-      username:
-      password:
-      driver-class-name:
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/test?useSSL=true
+      username: root
+      password: yE6D6QTqoT63ENAO
+      driver-class-name: com.mysql.cj.jdbc.Driver
     slave1:
-      jdbc-url:
-      username:
-      password:
-      driver-class-name:
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/test?useSSL=true
+      username: root
+      password: yE6D6QTqoT63ENAO
+      driver-class-name: com.mysql.cj.jdbc.Driver
     slave2:
-      jdbc-url:
-      username:
-      password:
-      driver-class-name:
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/test?useSSL=true
+      username: root
+      password: yE6D6QTqoT63ENAO
+      driver-class-name: com.mysql.cj.jdbc.Driver

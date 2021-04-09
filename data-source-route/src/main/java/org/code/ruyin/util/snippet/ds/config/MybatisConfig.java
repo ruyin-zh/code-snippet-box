@@ -2,6 +2,7 @@ package org.code.ruyin.util.snippet.ds.config;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
@@ -17,6 +18,7 @@ import javax.sql.DataSource;
  * @date: 2021/4/6
  * @desc:
  */
+@MapperScan(basePackages = "org.code.ruyin.util.snippet.ds.dao.mapper")
 @EnableTransactionManagement
 @Configuration
 public class MybatisConfig {
