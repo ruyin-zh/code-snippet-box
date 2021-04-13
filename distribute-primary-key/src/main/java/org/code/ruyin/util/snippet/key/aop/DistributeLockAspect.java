@@ -54,7 +54,7 @@ public class DistributeLockAspect {
     }
 
 
-    @AfterThrowing(value = "distributeLockAspect()")
+    @AfterThrowing(value = "distributeLockAspect()",throwing = "ex")
     public void afterThrowing(Throwable ex){
         throw new RuntimeException(ex);
     }
